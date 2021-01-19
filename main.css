@@ -1,0 +1,514 @@
+html{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background: black;
+    margin: 0;
+    width: 100vw;
+    padding-bottom: 30px;
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.884)), url(images/mobile-bg.jpg);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100%;
+}
+
+#loading{
+    background: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+#loading div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Roboto', serif;
+}
+#loading img{
+    width: 250px;
+}
+
+.header-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-group img{
+    animation: appear 2s;
+}
+.header-group h1{
+    animation: appear 2.5s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+h1{
+    font-size: 32px;
+    color: white;
+    font-family: 'Cinzel', serif;
+}
+h2{
+    font-size: 25px;
+    color: white;
+    font-family: 'Cinzel', serif;
+}
+
+.arrow-down{
+    color: white;
+    font-size: 45px;
+}
+.arrow-down:hover, .arrow-down:active{
+    text-shadow: 0px 0px 5px white;
+} 
+
+
+/* video */
+.video{
+    background: rgb(26, 26, 26);
+    overflow: hidden;
+    margin-top: 10px;
+}
+.video video{
+    width: 100%;
+}
+.video source{
+    width: 100px;
+}
+
+
+/*galeria*/
+.gallery{
+    align-items: center;
+    background: #111111;
+    display: flex;
+    padding-bottom: 100px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.gallery h2{
+    margin-bottom: 40px;
+}
+
+.flex-pictures{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.gallery-picture{
+    width: 50%;
+    height: 200px !important;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 4px 4px 8px rgb(46, 46, 46);
+}
+.gallery-picture:hover, .gallery-picture:active{
+    transform: scale(1.05);
+    transition: .5s;
+}
+
+.mobile-none{
+    display: none;
+}
+
+.button-portfolio{
+    background: #892828;
+    border: 2px black solid;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding: 15px 40px;
+    margin-top: 30px;
+}
+.button-portfolio:hover, .button-portfolio:active{
+    background: #9e3e3e;
+    transition: all .5s;
+} 
+
+
+/*contato*/
+.contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.884), rgba(0, 0, 0, 0.884)), url(images/mobile-bg.jpg);
+    background-attachment: fixed;
+}
+
+.h2-contato{
+    font-size: 16px;
+    letter-spacing: 2.5px;
+}
+.botao-contato{
+    display: flex;
+    align-items: center;
+    border: 2px black solid;
+    border-radius: 16px;
+    color: white;
+    padding: 14px 20px;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.whatsapp{
+    background: #33af23a6;
+}
+.whatsapp:hover, .whatsapp:active{
+    background: #33af23fa;
+    transition: all .5s;
+}
+
+.icone{
+    font-size: 18px;
+    margin-right: 11px;
+}
+
+.contato2{
+    background: #111111;
+}
+
+.instagram{
+    background: #75156086;
+    padding: 14px 60px;
+    border: .5px black solid;
+}
+.instagram:hover, .instagram:active{
+    background: #a31d86;
+    transition: all .5s;    
+}
+
+/*hr*/
+.red-hr{
+    border-color: #892828;
+    margin: 40px 0;
+}
+
+
+/*footer*/
+footer{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px; 
+}
+
+footer h2{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+footer li{
+    list-style: none;
+    font-size: 12px;
+    margin-bottom: 1px;
+}
+
+footer li i{
+    vertical-align: middle;
+}
+
+footer ul{
+    padding: 0;
+}
+
+/*secondary footer*/
+.secondary-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+@media (min-width: 800px){
+
+    html{
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.829)), url(images/mobile-bg.jpg);
+        background-attachment: fixed;
+    }
+    body{
+        width: 800px;
+        height: 100%;
+        margin: 0 auto;
+        box-shadow: 0px 0px 25px black;
+    }
+
+    /*header*/
+    header{
+        width: 100%;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.884)), url(images/header-bg.jpg);
+        background-position: center ;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        align-items: center;
+    }
+
+    .header-group{
+        gap: 10px;
+        align-self: flex-start;
+        margin-left: 80px;
+    }
+
+    .header-group img{
+        animation: header 1.5s;
+        animation-delay: .3s;
+        animation-fill-mode: backwards;
+    }
+    .header-group h1{
+        animation: header 1.5s;
+    }
+
+    @keyframes header {
+        from{
+            transform: translateY(-1000px);            
+        }
+        to{
+            transform: translateY(0px);
+        }
+    }
+
+
+
+    /*galeria*/
+
+    .gallery-picture{
+        width: 300px;
+        height: 160px;
+        border: 1px rgb(0, 0, 0) solid;
+    }
+
+    .mobile-none{
+        display: block;
+    }
+
+    .flex-pictures{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .button-portfolio{
+        margin-top: 60px;
+    }
+
+    /*contato*/
+    .contato{
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .h2-contato{
+        font-size: 18px;
+    }
+    .botao-contato{
+        font-size: 14px;
+        padding: 15.5px 22px;
+    }
+
+    .botao-contato2:hover, .botao-contato2:active {
+        transform: scale(1.28);
+        transition: all .3s;
+    }
+    .instagram{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    /*footer*/
+    li{
+        font-size: 14px;
+    }
+    
+    footer h2{
+        font-size: 18px;
+    }
+
+    /*secondary footer*/
+    .secondary-footer{
+        flex-direction: row;
+        font-size: 12px;
+    }
+
+    .secondary-footer p{
+        margin-right: 5px;
+    }
+
+}
+
+@media (max-width: 1065px){
+    header{
+        background-size: cover;
+    }
+}
+
+
+
+
+
+
+
+/*Modal de abertura de imagem https://www.w3schools.com/howto/howto_css_modal_images.asp*/
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.795); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+
+  /*browser*/
+  .not-suported{
+      display: none;
+  }
+
+  .safari-fix{
+      margin-top: 10px;
+  }
+
+
+  @media (max-width: 390px){
+      footer li{
+          font-size: 10px;
+      }
+  }
+  @media (max-width: 390px){
+      footer li .icone{
+          display: none;
+      }
+      footer li{
+          margin-top: 8px;
+      }
+  }

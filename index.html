@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rufus INK</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bb176450ad.js" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+</head>
+
+<body onload="browserVerify(), loading()">
+
+    <div id="loading" style="display: inline-flex;">
+        <div>
+            <img src="images/loading-spinner.gif" alt="">
+            <span><i>Carregando ...</i></span>
+        </div>
+    </div>
+
+    <div id="main-site" style="display: none;">
+        <header>
+            <div class="header-group">
+                <img src="./images/logo.png" alt="" style="width: 250px ;">
+                <h1>Giovanni ABL</h1>
+            </div>
+            <a href="#video" class="scroll-page"><i class="fas fa-chevron-down arrow-down"></i></a>
+        </header>
+
+        <section class="video" id="video">
+            <video loop muted autoplay>
+                <source src="images/video/video.mp4" type="video/mp4">
+                <source src="images/video/video.ogg" type="video/ogg">
+                Seu navegador não suporta este vídeo.
+            </video>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <h2>Galeria</h1>
+                <div class="flex-pictures">
+
+                    <img src="images/tattoo4.jpg" class="gallery-picture safari-fix" onclick="abrirModal(event)"
+                        name="gallery-picture">
+                    <img src="images/tatuagens novas/tatuagem1.2.jpg" class="gallery-picture safari-fix"
+                        onclick="abrirModal(event)" name="gallery-picture">
+                    <img src="images/tatuagens novas/tatuagem1.3.jpg" class="gallery-picture safari-fix"
+                        onclick="abrirModal(event)" name="gallery-picture">
+                    <img src="images/tatuagens novas/tatuagem1.4.jpg" class="gallery-picture safari-fix"
+                        onclick="abrirModal(event)" name="gallery-picture">
+                    <img src="images/tatuagens novas/tatuagem1.5.jpg" class="gallery-picture safari-fix"
+                        onclick="abrirModal(event)" name="gallery-picture">
+
+                    <img src="images/tatuagens novas/tatuagem1.6.jpg" class="gallery-picture mobile-none safari-fix"
+                        onclick="abrirModal(event)" name="gallery-picture">
+                    <img src="images/tatuagens novas/tatuagem1.7.jpg" class="gallery-picture mobile-none safari-fix"
+                        onclick="abrirModal(event)" name="gallery-picture">
+                    <img src="images/tatuagens novas/tatuagem1.8.jpg" class="gallery-picture mobile-none safari-fix"
+                        onclick="abrirModal(event)" name="gallery-picture">
+
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal" onclick="fecharModal()">
+
+                        <!-- The Close Button -->
+                        <span class="close" onclick="fecharModal()">&times;</span>
+
+                        <!-- Modal Content (The Image) -->
+                        <img class="modal-content" id="img01">
+
+                    </div>
+
+
+
+
+                </div>
+                <a href="https://www.behance.net/giovanni-agricio" target="_blank" class="button-portfolio">Ver todos os
+                    trabalhos</a>
+        </section>
+
+        <!-- <section class="contato">
+        <h2 class="h2-contato">Solicite um orçamento !</h2>
+        <a href="https://api.whatsapp.com/send?phone=5511949246033" target="_blank" class="botao-contato whatsapp"> <i class="fab fa-whatsapp icone"></i>Chamar no whatsapp</a>
+        </section> -->
+
+        <section class="contato">
+            <h2 class="h2-contato">Solicite um orçamento !</h2>
+            <a href="https://api.whatsapp.com/send?phone=5511949246033" target="_blank" class="botao-contato2"><i
+                    class="fab fa-whatsapp icone" style="color: #0b8173
+        ; font-size: 48px;"></i></a>
+        </section>
+
+        <!-- <section class="contato contato2">
+        <h2 class="h2-contato">Siga nosso Instagram !</h2>
+        <a href="https://www.instagram.com/rufusinkbarbershop/" target="_blank" class="botao-contato instagram"> <i
+                class="fab fa-instagram icone"></i>Instagram</a href="">
+        </section> -->
+
+        <section class="contato contato2">
+            <h2 class="h2-contato">Siga nosso Instagram !</h2>
+            <a href="https://www.instagram.com/rufusinkbarbershop/" target="_blank" class="botao-contato2"><img
+                    src="images/instagram-logo.png" style="height: 48px;"></a>
+        </section>
+
+        <hr class="red-hr">
+
+        <footer>
+            <div class="footer1">
+                <h3>Onde Estamos</h3>
+                <ul>
+                    <li>Av. Águas de São Pedro, 334</li>
+                    <li>Paulicéia</li>
+                    <li>São Paulo - SP - Brasil</li>
+                </ul>
+            </div>
+
+            <div class="footer2">
+                <h3>Contato</h3>
+                <ul>
+                    <li><i class="fab fa-instagram icone"></i> @rufusinkbarbershop</li>
+                    <li><i class="fab fa-whatsapp icone"></i> (11) 94924-6033</li>
+                </ul>
+            </div>
+        </footer>
+
+        <hr class="red-hr">
+
+        <div class="secondary-footer">
+            <p>| &copy; 2020 Rufus INK Barbershop | </p>
+            <p>Developed by <a href="https://www.linkedin.com/in/vinicius-lopes-alves/" target="_blank"
+                    style="color: white; text-decoration: underline;">Vinicius Lopes Alves</a></p>
+        </div>
+
+    </div>
+
+    <div id="not-suported" style="display: none;">
+        <h1 style="text-align: center;">Rufus INK</h1>
+        <h2 style="margin-top: 45vh;">O site não é compatível com o Internet Explorer. Indicamos a utilização do <a
+                href="https://www.google.com/intl/pt-BR/chrome/" target="_blank">Google Chrome.</a></h1>
+
+            <ul style="color: white; list-style: none;">
+                <li><i class="fab fa-instagram icone"></i> @rufusinkbarbershop</li>
+                <li><i class="fab fa-whatsapp icone"></i> (11) 94924-6033</li>
+            </ul>
+
+    </div>
+
+
+
+    <script src="main.js"></script>
+    <script>
+        (function ($) {
+
+                var $doc = $('html, body');
+                $('.scroll-page').click(function () {
+                    $doc.animate({
+                        scrollTop: $($.attr(this, 'href')).offset().top
+                    }, 800);
+                    return false;
+                })
+
+            })(jQuery);
+    </script>
+
+
+    Global site tag (gtag.js) - Google Analytics
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174523649-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-174523649-2');
+    </script>
+
+</body>
+
+</html>
