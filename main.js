@@ -70,47 +70,43 @@ function browserVerify() {
 
 
 //motion by device move
-if ($(window).width() < 800) {
-    console.log('Aplicou');
+let counter = 0;
+const updateRate = 10;
+const limit = 45;
+const tiltable = document.getElementById("tiltable");
 
-    let counter = 0;
-    const updateRate = 10;
-    const limit = 45;
-    const tiltable = document.getElementsByClassName("tiltable");
+function updateNow() {
+    return counter++ % updateRate === 0;
+};
 
-    function updateNow() {
-        return counter++ % updateRate === 0;
-    };
+window.addEventListener("deviceorientation", function (event) {
+    if (updateNow()) {
+        let positionGama = Math.round(event.gamma);
+        let positionBeta = Math.round(event.beta);
 
-    window.addEventListener("deviceorientation", function (event) {
-        if (updateNow()) {
-            let positionGama = Math.round(event.gamma);
-            let positionBeta = Math.round(event.beta);
-
-            if (Math.abs(positionGama) > limit) {
-                if (positionGama > limit) {
-                    positionGama = limit;
-                } else {
-                    positionGama = -limit;
-                }
+        if (Math.abs(positionGama) > limit) {
+            if (positionGama > limit) {
+                positionGama = limit;
+            } else {
+                positionGama = -limit;
             }
-            if (Math.abs(positionBeta) > limit) {
-                if (positionBeta > limit) {
-                    positionBeta = limit;
-                } else {
-                    positionBeta = -limit;
-                }
-            }
-
-            positionGama = positionGama / -100;
-            positionBeta = positionBeta / -100;
-
-            let styleY = "rotateY(" + positionGama * 3 + "deg)";
-            let styleX = "rotateX(" + positionBeta * 2 + "deg)";
-            tiltable.style.transform = styleY + styleX;
         }
-    });
-}
+        if (Math.abs(positionBeta) > limit) {
+            if (positionBeta > limit) {
+                positionBeta = limit;
+            } else {
+                positionBeta = -limit;
+            }
+        }
+
+        positionGama = positionGama / -100;
+        positionBeta = positionBeta / -100;
+
+        let styleY = "rotateY(" + positionGama * 3 + "deg)";
+        let styleX = "rotateX(" + positionBeta * 2 + "deg)";
+        tiltable.style.transform = styleY + styleX;
+    }
+});
 
 
 
